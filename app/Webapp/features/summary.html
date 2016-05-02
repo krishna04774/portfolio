@@ -1,0 +1,23 @@
+<!-- Header -->
+<div id="header" ng-include="'../app/Webapp/features/common/header.html'"></div>
+
+<!--Left Navigation Menu-->
+<aside id="leftMenu" ng-include="'../app/Webapp/features/leftNavigation.html'"></aside>
+<!--Main Content of Page #1-->
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="content">
+        <simple-panel class="col-lg-4" headertext="Grid #4">
+              <div class= "gridModify">This is Sumamry page and Can Modify Accordingly</div>
+            </simple-panel>
+        <simple-panel class="col-lg-4" headertext="Grid #5">
+                <div class= "gridModify">This is Sumamry page and Can Modify Accordingly</div>
+        </simple-panel>
+        <simple-panel class="col-lg-4" headertext="Grid #6">
+                  <div class= "gridModify">This is Sumamry page and Can Modify Accordingly</div>
+        </simple-panel>
+        <checklist-panel class="col-lg-12" panel-title="Table #2" can-start-new-checklist="true" start-new-checklist="vm.startNewChecklist" can-add-new-checklist-item="false">
+                 <div  id="PatientsGrid" class="grid" style="height:400px" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-exporter></div>
+        </checklist-panel>
+    </div>
+</div>

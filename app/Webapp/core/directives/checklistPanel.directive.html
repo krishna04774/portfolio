@@ -1,0 +1,14 @@
+<div class="hpanel hgreen">
+    <div class="panel-heading hbuilt">
+        <!--<div style="display: inline" class="pull-left"></div>-->
+        <div panel-tools></div>
+        <span>{{panelTitle}}</span>
+        <i ng-show="isCompleteChecklistButtonVisible()" class="btn btn-link fa fa-check-circle-o pull-right iconAlign" style="font-size: 1.3em; margin-right: 4px" title="Mark Checklist Completed" ng-click="markChecklistComplete()"></i>
+        <i ng-show="isStartChecklistButtonVisible()" class="btn btn-link fa fa-pencil-square-o pull-right iconAlign" style="font-size: 1.3em; margin-right: 4px" title="Start Checklist" ng-click="startNewChecklist()"></i>
+        <i ng-show="isAddNewChecklistItemButtonVisible()" class="btn btn-link fa fa-plus-square pull-right iconAlign" style="font-size: 1.3em; margin-right: 4px" title="Add Checklist Item" ng-click="addNewChecklistItem()"></i>
+    </div>
+    <div class="panel-tbody">
+        <span us-spinner="{radius:5, width:5}" spinner-key="{{spinnerKey}}" spinner-start-active="true"> </span>
+        <div class="panel-content" ng-transclude style="width: 100%;"></div>
+    </div>
+</div>

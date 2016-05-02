@@ -1,0 +1,11 @@
+<div id="navigation">
+    <ul side-navigation class="nav" id="side-menu">
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard"> <span class="nav-label">Pages</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level" ng-class="{in: $state.includes('interface')}">
+                <li ui-sref-active="active"><a ui-sref="welcome">Welcome</a></li>
+                <li><a ui-sref="summaryPage">Summary</a></li>
+            </ul>
+        </li>
+     </ul>
+</div>

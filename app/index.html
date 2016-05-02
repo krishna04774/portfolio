@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Title for the Pages-->
+ <title page-title></title>
+ <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- JQuery -->
+    <script src="/app/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/app/vendor/bootstrap/bootstrap.css" />
+    <script src="/app/vendor/bootstrap/bootstrap.min.js"></script>
+    <!--stylesheets-->
+     <link rel="stylesheet" href="../app/styles/style.css" />
+     <!-- Font Awesome -->
+    <link href="/app/vendor/fontawesome/css/font-awesome.css" rel="stylesheet" />
+   <!--Angular Libraries-->
+
+    <script src="/app/vendor/angular/angular.js"></script>
+    <script src="/app/vendor/angular/angular-resource.min.js"></script>
+    <script src="/app/vendor/angular/angular-cookies.min.js"></script>
+    <script src="/app/vendor/angular/angular-ui-router.min.js"></script>
+    <script src="/app/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!--Angular UI Grid-->
+    <script src="/app/vendor/angular-ui-grid/ui-grid.min.js"></script>
+    <link rel="stylesheet" href="/app/vendor/angular-ui-grid/ui-grid.min.css">
+    <!-- Bootstrap Metismenu Accordion Menu -->
+    <link href="/app/vendor/metismenu/metisMenu.min.css" rel="stylesheet" />
+    <script src="/app/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!--app configuration-->
+   <script src="/app/Webapp/app/app.module.js"></script>
+    <script src="/app/Webapp/app/app.config.js"></script>
+    <!-- Main -->
+    <script src="/app/Webapp/core/mainController.js"></script>
+    <script src="/app/Webapp/core/summaryController.js"></script>
+
+    <!--Directives-->
+    <script src="/app/Webapp/core/directives/simplePanel.directive.js"></script>
+    <script src="/app/Webapp/core/directives/pageTitle.directive.js"></script>
+     <script src="/app/Webapp/core/directives/checklistPanel.directive.js"></script>
+      <script
+     src="/app/Webapp/core/directives/toggleLeftMenu.directive.js"></script>
+     <script
+     src="/app/Webapp/core/directives/sideNavigation.directive.js"></script>
+    <!-- Services-->
+    <script src="/app/Webapp/features/services/Page1Service.js"></script>
+
+</head>
+<body>
+   <body ng-controller="MainController as mainController" class="{{$state.current.data.specialClass}}">
+    <!-- Page view wrapper -->
+    <div class="uiview" ui-view>
+    </div>
+</body>
+
+</body>
+</html>

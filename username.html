@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Login</title>
+
+<!-- Base Styles -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Icon Font Styles -->
+<link rel="stylesheet" href="css/font-awesome.css">
+<script src="js/jquery1.9.1.js"></script>
+<style>
+
+
+</style>
+<script>
+
+ function validateLogin(){
+
+  var email = $("#emailId").val();
+  var password =  $("#password").val();
+  var validForm = false;
+  var validaEmail = false;
+  var validPassword = false;
+
+  if( ("" != email) && (undefined !=  email)){
+    if("user1@play.com" == email){
+      validForm = true;
+      validaEmail = true;
+      document.myForm.action = "./app/index.html";
+
+    }else if("user2@play.com" == email){
+      validForm = true;
+      validaEmail = true;
+      document.myForm.action = "./app/index.html";
+    }else if("user3@play.com" == email){
+      validForm = true;
+      validaEmail = true;
+      document.myForm.action = "./app/index.html";
+    }
+    else{
+        alert('Please enter a valid Email Id');
+        return false;
+      }
+  }else{
+    alert('Please enter a valid Email Id');
+    return false;
+  }
+  if("" != password && undefined != password){
+    validForm = true;
+    validPassword = true;
+  }else{
+    alert('Please enter a valid Password');
+    return false;
+  }
+  if (typeof(Storage) != "undefined") {
+     localStorage.setItem("userName", email);
+  }
+
+  if(validForm  == true){
+    return true;
+  }
+
+}
+</script>
+</head>
+
+<body>
+<div id="fixed-top-navigation" class="container-fluid top-bg navbar-fixed-top ">
+  <div class="user-interface ">
+    <div class="col-xs-12 col-sm-6 col-lg-6 logo"><a href="./index.html"><p class = "univ">Insert Logo Here</p></a></div>
+    <div class="col-xs-12 col-sm-6 col-lg-6 interface" >
+      <ul class="pull-right nav-ali">
+        <li><i class="fa fa-plus-circle fn-aw"><a href="./index.html"> Products</a></i></li>
+        <li><i class="fa fa-info-circle fn-aw"><a href="./index.html"> About</a></i></li>
+        <li><i class="fa fa-sign-out fn-aw"><a href="./username.html"> Login</a></i></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="container-fluid top" id="main-container">
+ <div class="row website nav-ali">
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+              <h3><Strong>Welcome to Play Project</Strong></h3>
+
+
+    </div>
+  <div class="row login">
+    <div class="col-lg-8 col-md-12 login-box col-sm-offset-3 col-lg-offset-2" style="">
+      <div class="col-sm-12 col-lg-4 pad0 box-login" style= "">
+        <div class="account-wall">
+          <form class="form-signin" method="get" name="myForm" action="" style="margin-top:100px; margin-bottom:120px;">
+            <input type="text" autofocus required placeholder="Email" class="form-control" id="emailId" name="emailId">
+            <input type="password" required placeholder="Password" class="form-control" id="password" name="password">
+            <button class="btn btn-lg btn-primary btn-block " onclick="return validateLogin();"> Log in to Play Project </button>
+
+
+
+            <label class="checkbox pull-left loginbtn">
+              <input type="checkbox" value="remember-me">
+              <span>Remember Username</span> </label>
+            <span class="clearfix"></span>
+            <div> <a href="#">Forgot your password?</a> | <a href="#">Help</a> </div>
+          </form>
+        </div>
+      </div>
+			<div class="col-sm-12 col-md-12 col-lg-8 pad0 " > <img src="./Website/img/intro-bg.jpg" alt="rightimage" > </div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  </div>
+  <div id="footer" class=" col-xs-12 col-md-12 col-lg-12">
+            &copy; Copyright 2015 XXXXX
+        </div>
+</div>
+
+
+<!-- Bootstrap Library -->
+<script src="js/bootstrap.js"></script>
+<script src="js/page-elements.js"></script>
+</body>
+</html>

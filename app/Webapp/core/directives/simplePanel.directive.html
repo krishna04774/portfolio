@@ -1,0 +1,12 @@
+<div class="hpanel hgreen">
+    <div class="panel-heading hbuilt">
+        <div panel-tools></div>
+        <span>{{headerText}}</span>
+        <i ng-show="hasAddActionCallback()" class="btn btn-link fa fa-plus pull-right iconAlign" title="Add New" ng-click="addAction()"></i>
+        <i ng-show="hasDetailsActionCallback()" class="btn btn-link fa fa-cogs pull-right iconAlign" title="Actions" ng-click="detailsAction()"></i>
+    </div>
+    <div class="panel-body">
+        <span ng-show="hasSpinnerKey()" us-spinner="{radius:5, width:5}" spinner-key="{{spinnerKey}}" spinner-start-active="true"></span>
+        <div class="panel-content grids" ng-transclude></div>
+    </div>
+</div>

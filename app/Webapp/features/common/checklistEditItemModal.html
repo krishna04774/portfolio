@@ -1,0 +1,87 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Edit Checklist Item</h3>
+    </div>
+    <form id="editChecklist" name="editChecklist">
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3">User</label>
+                    <div class="col-sm-9">
+                        <input class="form-control"  ng-model="checklistTemplateItem.Patient_ID" name="Patient_ID" required/>
+                        <div ng-show="editChecklist.selectedDomains.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Select one or more domains</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-sm-3 required">Profile WorkFlow</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="Protocol" ng-model="checklistTemplateItem.Protocol" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 required">Site</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" name="Site" ng-model="checklistTemplateItem.Site_ID" value="{{checklistTemplateItem.Name}}" required />
+                        <div ng-show="editChecklist.Name.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter title</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 required">Visit</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="Description" ng-model="checklistTemplateItem.Visit_ID" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 required">New Items</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="NewDataItems" ng-model="checklistTemplateItem.NewDataItems" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-sm-3 required">New AE's</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="NewAes" ng-model="checklistTemplateItem.Aes" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+                     <div class="form-group">
+                    <label class="col-sm-3 required">New SAE's</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="NewAes" ng-model="checklistTemplateItem.SAEs" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 required">New Workflow</label>
+                    <div class="col-sm-9">
+                        <input input class="form-control" style="width:100%"name="ProfileWorkFlow" ng-model="checklistTemplateItem.ProfileWorkFlow" />
+                        <div ng-show="editChecklist.Description.$invalid">
+                            <span class="error" ng-show="editChecklist.error">Enter details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok(checklistTemplateItem)">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
