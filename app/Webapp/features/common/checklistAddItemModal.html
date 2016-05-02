@@ -8,7 +8,7 @@
                 <div class="form-group">
                     <label class="col-sm-3">User</label>
                     <div class="col-sm-9">
-                        <input class="form-control"  ng-model="addChecklist.Patient_ID" name="Patient_ID" required/>
+                        <input class="form-control"  ng-model="addChecklist.Patient_Id" name="PatientID" placeholder="Enter User Name" required/>
                         <div ng-show="addChecklist.selectedDomains.$invalid">
                             <span class="error" ng-show="addChecklist.error">Select one or more domains</span>
                         </div>
@@ -17,7 +17,7 @@
                  <div class="form-group">
                     <label class="col-sm-3 required">Profile WorkFlow</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="Protocol" ng-model="addChecklist.Protocol" />
+                        <input class="form-control"  name="Protocol" ng-model="addChecklist.ProtocolID" placeholder="Enter the protocol name" />
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>
@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 required">Site</label>
                     <div class="col-sm-9">
-                        <input class="form-control" type="text" name="Site" ng-model="addChecklist.Site_ID" value="{{checklistTemplateItem.Name}}" required />
+                        <input class="form-control" type="text" name="Site" ng-model="addChecklist.Site_ID" placeholder="Enter Site Number"  required />
                         <div ng-show="addChecklist.Name.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter title</span>
                         </div>
@@ -35,7 +35,8 @@
                 <div class="form-group">
                     <label class="col-sm-3 required">Visit</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="Description" ng-model="addChecklist.Visit_ID" />
+                        <input class="form-control" style="width:100%"name="Description" ng-model="addChecklist.Visit_ID"
+                        placeholder="Enter the Visit number" />
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>
@@ -44,7 +45,8 @@
                   <div class="form-group">
                     <label class="col-sm-3 required">New Items</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="NewDataItems" ng-model="addChecklist.NewDataItems" />
+                        <input class="form-control" style="width:100%"name="NewDataItems" ng-model="addChecklist.NewDataItem"
+                        placeholder="Enter the New Item Name" />
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>
@@ -53,7 +55,8 @@
                  <div class="form-group">
                     <label class="col-sm-3 required">New AE's</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="NewAes" ng-model="addChecklist.Aes" />
+                        <input class="form-control" style="width:100%"name="NewAes" ng-model="addChecklist.Aes"
+                        placeholder="Enter the AE"/>
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>
@@ -62,7 +65,8 @@
                      <div class="form-group">
                     <label class="col-sm-3 required">New SAE's</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="NewAes" ng-model="addChecklist.SAEs" />
+                        <input class="form-control" style="width:100%"name="NewAes" ng-model="addChecklist.SAEs"
+                        placeholder="Enter the SAE" />
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>
@@ -71,7 +75,8 @@
                 <div class="form-group">
                     <label class="col-sm-3 required">New Workflow</label>
                     <div class="col-sm-9">
-                        <input input class="form-control" style="width:100%"name="ProfileWorkFlow" ng-model="addChecklist.ProfileWorkFlow" />
+                        <input class="form-control" style="width:100%"name="ProfileWorkFlow" ng-model="addChecklist.ProfileWorkFlows"
+                        placeholder="Enter the workflow" />
                         <div ng-show="addChecklist.Description.$invalid">
                             <span class="error" ng-show="addChecklist.error">Enter details</span>
                         </div>

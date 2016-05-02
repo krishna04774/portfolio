@@ -46,8 +46,8 @@
             size: 'md',
         });
 
-         modalInstance.result.then(function (newItem) {
-            getWorkflowItems($scope.PatientId);
+         modalInstance.result.then(function (addChecklist) {
+            getWorkflowItems($scope.Patient_ID);
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -64,7 +64,7 @@
                 }
 
                 function createChecklistTemplateItemSuccessResponse (response) {
-                    $modalInstance.close($scope.addedChecklistItem);
+                    $modalInstance.close($scope.addChecklist);
                 }
 
                 function createChecklistTemplateItemErrorResponse (response) {
